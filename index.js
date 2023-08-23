@@ -19,6 +19,15 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+//Gorev: 1-a
+const surucuYasi=29;
+
+if (surucuYasi >=18) {
+  console.log(true);
+} else {
+  console.log(false)
+}
+
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -32,6 +41,17 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+//Gorev: 1-b
+let birinciDeger = 29;
+let ikinciDeger = '29';
+
+if (birinciDeger === ikinciDeger) {
+  console.log(true);
+} else {
+  console.log(false)
+}
+
+
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
 
@@ -43,6 +63,17 @@ Aşağıdakileri yap:
    İPUCU: Number metoduna bakabilirsin
 */
 
+//Gorev: 1-c
+let x = "1999";
+let y = parseInt(x);
+console.log(y)
+if (x === y) {
+  console.log(true);
+} else {
+  console.log(false)
+}
+
+
 /*
 Görev 1d - Çarpma
  
@@ -51,10 +82,16 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamla:
    2. a ve b'yi çarpıp, sonucu dönsün
    3. console.log(carpma(7,4)) ile yazdığın fonsiyonu test edin. Console'da sonucu 28 olarak görmelisin.
 */
+//Gorev: 1-d
 
-function carpma(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function carpma(num1,num2){
+  let result = num1*num2;
+  return result
 }
+
+carpma(7,4);
+console.log(carpma(7,4));
+
 
 /* Görev 2 : Köpeğin Yaşı */
 
@@ -65,9 +102,17 @@ Aşağıdakileri yap:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+ //Gorev: 2
+
+function kopeginYasi(insanYasi, carp) {
+  
+  let kopeginYasi = insanYasi * carp;
+
+  return kopeginYasi
 }
+kopeginYasi(29,7);
+console.log(kopeginYasi(29,7));
+
 
 /* Görev 3 */
 /*
@@ -113,9 +158,13 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+//Gorev: 4-a
+function milDonusturucu(km){
+  return km * 0.621371;
 }
+
+let km = 5;
+console.log("Mil Karşılığı: " + milDonusturucu(km));
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -127,9 +176,13 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yap:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+//Gorev: 4-b
+function feetDonusturucu(cm){
+  return cm / 30.48;
 }
+
+let cm = 25;
+console.log("Feet Karşılığı: " + feetDonusturucu(cm));
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
