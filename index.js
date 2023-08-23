@@ -136,19 +136,19 @@ function oyun(oyuncu, bilgisayar) {
   } else if (oyuncu=="Taş" && bilgisayar == "Makas") {
       return "Kazandın!";
   } else {
-    return "Kaybettin";
+    return "Kaybettin!";
   }
 }
 
 console.log(oyun("Kağıt","Kağıt")); //Bereberlik
-//console.log(oyun("Makas","Makas")); //Bereberlik
-//console.log(oyun("Taş","Taş")); //Bereberlik
+console.log(oyun("Makas","Makas")); //Bereberlik
+console.log(oyun("Taş","Taş")); //Bereberlik
 console.log(oyun("Kağıt","Taş")); //Kazanma
 console.log(oyun("Makas","Kağıt")); //Kazanma
 console.log(oyun("Taş","Makas")); //Kazanma
-//console.log(oyun("Makas","Taş")); //Kaybetme
+console.log(oyun("Makas","Taş")); //Kaybetme
 console.log(oyun("Kağıt","Makas")); //Kaybetme
-//console.log(oyun("Taş","Kağıt")); //Kaybetme
+console.log(oyun("Taş","Kağıt")); //Kaybetme
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
@@ -227,8 +227,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(num) {
+  return (num + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!");
+}
+let maymun = 5;
+for (let i = 0; i < maymun; i++) {
+  console.log(i,cocukSarkisi(5 - i));
 }
 
 /* Görev 6 : Not Hesaplayıcı */
