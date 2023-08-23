@@ -104,14 +104,12 @@ Aşağıdakileri yap:
 
  //Gorev: 2
 
-function kopeginYasi(insanYasi, carp) {
+function kopeginYasi(yas) {
   
-  let kopeginYasi = insanYasi * carp;
-
-  return kopeginYasi
+  return yas * 7;
 }
-kopeginYasi(29,7);
-console.log(kopeginYasi(29,7));
+
+console.log(kopeginYasi(2));
 
 
 /* Görev 3 */
