@@ -250,9 +250,22 @@ Aşağdakileri notHesapla fonksiyonunda yap.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function notHesapla(puan) {
+  if (puan >= 90 && puan <= 100) {
+    return "A aldın";
+  } else if (puan >= 80 && puan < 90) {
+    return "B aldın";
+  } else if (puan >= 70 && puan < 80) {
+    return "C aldın";
+  } else if (puan >= 60 && puan < 70) {
+    return "D aldın";
+  } else {
+    return "F aldın";
+  }
 }
+
+console.log(notHesapla(58));
+
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
@@ -265,9 +278,20 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+const sesliHarfler = ["a", "A", "e", "E", "ı", "I", "i", "İ", "o", "O", "ö", "Ö", "u", "U", "ü", "Ü"];
+
+let sesliHarfSayisi = 0;
+
+function sesliHarfSayaci(word) {
+  for (let i = 0; i < word.length; i++) {
+    if (sesliHarfler.includes(word[i])) {
+      sesliHarfSayisi++;
+    }
+  }
+  return sesliHarfSayisi;
 }
+
+console.log(sesliHarfSayaci("Murat Can ÖZCAN"));
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
