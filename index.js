@@ -127,8 +127,28 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar) {
-  /*buraya kodunu yazabilirsin*/
+  if (oyuncu==bilgisayar){
+    return "Beraberlik";
+  } else if (oyuncu=="Kağıt" && bilgisayar == "Taş") {
+      return "Kazandın!";
+  } else if (oyuncu=="Makas" && bilgisayar == "Kağıt") {
+      return "Kazandın!";
+  } else if (oyuncu=="Taş" && bilgisayar == "Makas") {
+      return "Kazandın!";
+  } else {
+    return "Kaybettin";
+  }
 }
+
+console.log(oyun("Kağıt","Kağıt")); //Bereberlik
+//console.log(oyun("Makas","Makas")); //Bereberlik
+//console.log(oyun("Taş","Taş")); //Bereberlik
+console.log(oyun("Kağıt","Taş")); //Kazanma
+console.log(oyun("Makas","Kağıt")); //Kazanma
+console.log(oyun("Taş","Makas")); //Kazanma
+//console.log(oyun("Makas","Taş")); //Kaybetme
+console.log(oyun("Kağıt","Makas")); //Kaybetme
+//console.log(oyun("Taş","Kağıt")); //Kaybetme
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
@@ -145,6 +165,19 @@ function oyun(oyuncu, bilgisayar) {
 Şimdi kendi seçtiğin bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığın oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
+function bilgisayarSecimi(){
+  
+  let secim = Math.random();
+
+  if (secim < 0.34) {
+    return "Kağıt";
+  } if (secim < 0.67) {
+      return "Makas";
+  }
+    return "Taş";
+}
+
+console.log(oyun("Makas",bilgisayarSecimi()));
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -161,8 +194,7 @@ function milDonusturucu(km){
   return km * 0.621371;
 }
 
-let km = 5;
-console.log("Mil Karşılığı: " + milDonusturucu(km));
+console.log("Mil Karşılığı: " + milDonusturucu(2));
 
 //Görev 4b - Santimetreden Feet
 /*
